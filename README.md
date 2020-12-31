@@ -2,5 +2,5 @@
 random password generator (rp9)
 
 # logo :
-
+█▀█ █▀█ █▀█\n
 

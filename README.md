@@ -1,6 +1,15 @@
-# random password generator
+# Random password generator
 random password generator (rp9)
 
-# logo :
+# Logo :
         █▀█ █▀█ █▀█ 
         █▀▄ █▀▀ ▀▀█
+        
+# Logo no error :
+        █▀█ █▀█ █▀█ 
+        █▀▄ █▀▀ ▀▀█
+                rp9|ok !
+# Logo error :              
+        █▀█ █▀█ █▀█
+        █▀▄ █▀▀ ▀▀█
+	        rp9|ERROR ! 

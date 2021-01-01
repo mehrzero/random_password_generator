@@ -5,11 +5,10 @@ random password generator (rp9)
         █▀█ █▀█ █▀█ 
         █▀▄ █▀▀ ▀▀█
         
-# Logo no error :
+# Logo error and no error :
         █▀█ █▀█ █▀█ 
         █▀▄ █▀▀ ▀▀█
-                rp9|ok !
-# Logo error :              
+                rp9|ok !              
         █▀█ █▀█ █▀█
         █▀▄ █▀▀ ▀▀█
 	        rp9|ERROR ! 

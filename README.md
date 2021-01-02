@@ -11,4 +11,4 @@ random password generator (rp9)
                 rp9|ok !              
         █▀█ █▀█ █▀█
         █▀▄ █▀▀ ▀▀█
-	          rp9|ERROR ! 
+	         rp9|ERROR ! 

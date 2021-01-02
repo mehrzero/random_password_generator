@@ -4,13 +4,7 @@ you can create your own password with any number of characters you want.
 # Logo :
         █▀█ █▀█ █▀█ 		█▀█ █▀█ █▀█ 		█▀█ █▀█ █▀█
         █▀▄ █▀▀ ▀▀█ 		█▀▄ █▀▀ ▀▀█ 		█▀▄ █▀▀ ▀▀█
-                                	rp9|ok ! 	        rp9|ERROR !
-# Logo error and no error :
-        █▀█ █▀█ █▀█ 
-        █▀▄ █▀▀ ▀▀█
-                rp9|ok !              
-        █▀█ █▀█ █▀█
-        █▀▄ █▀▀ ▀▀█
-	         rp9|ERROR ! 
+                                		rp9|ok ! 	        rp9|ERROR !
+
 # SYNOPSIS :
 	~$ rp9 [OPTION]... [TAKE NUMBER]

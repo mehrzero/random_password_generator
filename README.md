@@ -13,4 +13,4 @@ you can create your own password with any number of characters you want.
         █▀▄ █▀▀ ▀▀█
 	         rp9|ERROR ! 
 # SYNOPSIS :
-	~$ rp9 [OPTION]... [8, 16, 32, take]
+	~$ rp9 [OPTION]... [TAKE NUMBER]

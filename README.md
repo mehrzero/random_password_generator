@@ -8,3 +8,6 @@ you can create your own password with any number of characters you want.
 
 # SYNOPSIS :
 	~$ rp9 [OPTION]... [TAKE NUMBER]
+# OPTION :
+	-C or custom
+	

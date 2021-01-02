@@ -1,6 +1,6 @@
-# Random password generator
-random password generator (rp9)
-
+# Random password generator (rp9)
+Using uppercase and lowercase letters, numbers, symbols(sign),
+you can create your own password with any number of characters you want.
 # Logo :
         █▀█ █▀█ █▀█ 
         █▀▄ █▀▀ ▀▀█

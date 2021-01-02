@@ -12,3 +12,5 @@ random password generator (rp9)
         █▀█ █▀█ █▀█
         █▀▄ █▀▀ ▀▀█
 	         rp9|ERROR ! 
+# SYNOPSIS :
+	~$ rp9 [OPTION]... [8, 16, 32, take]

@@ -12,23 +12,25 @@ you can create your own password with any number of characters you want.
 # SYNOPSIS :
 	~$ rp9 [OPTION]... [TAKE NUMBER]
 # OPTION :
-	-C or custom
+	-C , custom
 	
-	-a or all , -ulns or upperlowernumbersign
+	-a , all 
 	
-	-u or upper
+	-u , upper
 	
-	-l or lower
+	-l , lower
 	
-	-n or number
+	-n , number
 	
-	-s or sign
+	-s , sign
 	
-	-ul or upperlower
+	-ul , upperlower
 	
 	-uln or upperlowernumber
+	
+	-ulns , upperlowernumbersign
 	
 # TAKE NUMBER :
 	8, 16, 32
 	
-	-t or take
+	-t , take

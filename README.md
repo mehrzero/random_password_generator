@@ -13,7 +13,7 @@ you can create your own password with any number of characters you want.
 	~$ rp9 [OPTION]... [TAKE NUMBER]
 # OPTION :
 	-C , custom
-	
+	>
 	-a , all 
 	> Creates a random password using all the characters on the keyboard.
 	-u , upper
@@ -30,8 +30,10 @@ you can create your own password with any number of characters you want.
 	> Generates random passwords using uppercase and lowercase, number English letters.
 	-ulns , upperlowernumbersign
 	> Generates random passwords using uppercase and lowercase, number, sign English letters.
-	
+	leet , 1337
+	>
 # TAKE NUMBER :
 	8, 16, 32
-	
+	>
 	-t , take
+	>

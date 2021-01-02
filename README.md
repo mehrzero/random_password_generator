@@ -11,3 +11,21 @@ you can create your own password with any number of characters you want.
 # OPTION :
 	-C or custom
 	
+	-a or all , -ulns or upperlowernumbersign
+	
+	-u or upper
+	
+	-l or lower
+	
+	-n or number
+	
+	-s or sign
+	
+	-ul or upperlower
+	
+	-uln or upperlowernumber
+	
+# TAKE NUMBER :
+	8, 16, 32
+	
+	-t or take

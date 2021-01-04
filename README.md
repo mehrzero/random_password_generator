@@ -30,7 +30,7 @@ you can create your own password with any number of characters you want.
 	> Generate random passwords using uppercase English letters and lowercase letters and numbers.
 	-ulns , upperlowernumbersign
 	> Generates random passwords using uppercase and lowercase, number, sign English letters.
-	leet , 1337
+	leet , 1337, LEET
 	>
 # LENGTH :
 	8, 16, 32
@@ -38,5 +38,8 @@ you can create your own password with any number of characters you want.
 	-len , LENGTH, length
 	>
 # EXAMPLES :
-	~$ rp9 -a 16
-	> 
+	~$ rp9 all 16
+	~$ rp9 -C -len
+	~$ rp9 upper 32
+	~$ rp9 1377
+	...

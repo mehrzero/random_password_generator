@@ -7,6 +7,7 @@
 int main(int argc , char *argv[]){
 
 	int characters;
+	string take_mood="";
 	int i;
 	for ( i = 0 ; i < argc ; ++i ){
 	
@@ -49,7 +50,7 @@ int main(int argc , char *argv[]){
 			
 			else if(((strcmp(argv[2], "8"))==0)){
 				characters=8;
-				cout <<YEL<<"<8> characters"<<WHT<<endl;	
+				cout <<YEL<<"\t<8> characters"<<WHT<<endl;	
 				cout <<YEL<<"Enter your Keyboard-letters : "<<WHT;cin >>mood;cout<<endl;
 				cout<<custom_password_maker(characters, mood);	
 				sys_ok();
@@ -58,7 +59,7 @@ int main(int argc , char *argv[]){
 			
 			else if(((strcmp(argv[2], "16"))==0)){
 				characters=16;
-				cout <<YEL<<"<16> characters"<<WHT<<endl;	
+				cout <<YEL<<"\t<16> characters"<<WHT<<endl;	
 				cout <<YEL<<"Enter your Keyboard-letters : "<<WHT;cin >>mood;cout<<endl;
 				cout<<custom_password_maker(characters, mood);
 				sys_ok();
@@ -67,21 +68,59 @@ int main(int argc , char *argv[]){
 			
 			else if(((strcmp(argv[2], "32"))==0)){
 				characters=32;
-				cout <<YEL<<"<32> characters"<<WHT<<endl;	
+				cout <<YEL<<"\t<32> characters"<<WHT<<endl;	
 				cout <<YEL<<"Enter your Keyboard-letters : "<<WHT;cin >>mood;cout<<endl;
 				cout<<custom_password_maker(characters, mood);
 				sys_ok();
 				break;	
 			}
 			
-			else if(((strcmp(argv[2], "take"))==0)||((strcmp(argv[2], "-t"))==0)){
-				characters=8;
+			else if(((strcmp(argv[2], "LENGTH"))==0)||
+					((strcmp(argv[2], "length"))==0)||
+					((strcmp(argv[2], "-len"))==0)){
+				
 				cout <<YEL<<"How many characters do you want your password to be?"<<WHT;cin >>characters;	
 				cout <<YEL<<"<"<<characters<<"> characters"<<WHT<<endl;	
 				cout <<YEL<<"Enter your Keyboard-letters : "<<WHT;cin >>mood;cout<<endl;
-				cout<<custom_password_maker(characters, mood);
+				take_mood = custom_password_maker(characters, mood);
+				cout<<take_mood;
 				sys_ok();
-				break;	
+				break;
+				/*
+				 * is test
+				if(take_mood.size()<8){
+					cout<<RED<<"Warning:\n\tThis password is not secure because it is less than 8 characters long\n";
+					cout <<YEL<<"\t<"<<take_mood.size()<<"> characters"<<WHT<<endl;
+					cout<<take_mood;
+					sys_ok();
+					break;
+				}
+				else if(take_mood.size()==8){
+					cout<<YEL<<"Medium safety\n";
+					cout <<YEL<<"\t<"<<take_mood.size()<<"> characters"<<WHT<<endl;
+					cout<<take_mood;
+					sys_ok();
+					break;
+				}
+				else if(take_mood.size()<=256){
+					cout<<GRN<<"Superb safety\n";
+					cout <<YEL<<"\t<"<<take_mood.size()<<"> characters"<<WHT<<endl;
+					cout<<take_mood;
+					sys_ok();
+					break;
+				}
+				else{
+					cout<<RED<<"Error :letters must be in English.";
+					sys_error();
+					break;
+				}
+				* 
+				*///	
+			}
+			else{
+				cout<<RED<<"Error :syintax error.";
+				sys_error();
+				break;
 			}
 		
 		}
@@ -102,7 +141,7 @@ int main(int argc , char *argv[]){
 			
 			
 			else if(((strcmp(argv[2], "8"))==0)){
-			cout <<YEL<<"<8> characters"<<WHT<<endl;
+			cout <<YEL<<"\t<8> characters"<<WHT<<endl;
 			characters=8;	
 			cout<<custom_password_maker(characters, mood);
 			sys_ok();
@@ -110,7 +149,7 @@ int main(int argc , char *argv[]){
 			}
 			
 			else if(((strcmp(argv[2], "16"))==0)){
-			cout <<YEL<<"<16> characters"<<WHT<<endl;	
+			cout <<YEL<<"\t<16> characters"<<WHT<<endl;	
 			characters=16;	
 			cout<<custom_password_maker(characters, mood);
 			sys_ok();
@@ -118,19 +157,26 @@ int main(int argc , char *argv[]){
 			}
 			
 			else if(((strcmp(argv[2], "32"))==0)){
-			cout <<YEL<<"<32> characters"<<WHT<<endl;	
+			cout <<YEL<<"\t<32> characters"<<WHT<<endl;	
 			characters=32;	
 			cout<<custom_password_maker(characters, mood);
 			sys_ok();
 			break;	
 			}
 			
-			else if(((strcmp(argv[2], "take"))==0)||
-					((strcmp(argv[2], "-t"))==0)){
+			else if(((strcmp(argv[2], "LENGTH"))==0)||
+					((strcmp(argv[2], "length"))==0)||
+					((strcmp(argv[2], "-len"))==0)){
 			cout <<YEL<<"How many characters do you want your password to be?"<<WHT;cin >>characters;	
-			cout<<custom_password_maker(characters, mood);
-			sys_ok();
-			break;	
+			take_mood = custom_password_maker(characters, mood);
+				cout<<take_mood;
+				sys_ok();
+				break;	
+			}
+			else{
+				cout<<RED<<"Error :syintax error.";
+				sys_error();
+				break;
 			}
 		}
 		///////////////////////////////////////
@@ -147,7 +193,7 @@ int main(int argc , char *argv[]){
 			
 			
 			else if(((strcmp(argv[2], "8"))==0)){
-			cout <<YEL<<"<8> characters"<<WHT<<endl;
+			cout <<YEL<<"\t<8> characters"<<WHT<<endl;
 			characters=8;	
 			cout<<custom_password_maker(characters, mood);
 			sys_ok();
@@ -155,7 +201,7 @@ int main(int argc , char *argv[]){
 			}
 			
 			else if(((strcmp(argv[2], "16"))==0)){
-			cout <<YEL<<"<16> characters"<<WHT<<endl;	
+			cout <<YEL<<"\t<16> characters"<<WHT<<endl;	
 			characters=16;	
 			cout<<custom_password_maker(characters, mood);
 			sys_ok();
@@ -163,19 +209,26 @@ int main(int argc , char *argv[]){
 			}
 			
 			else if(((strcmp(argv[2], "32"))==0)){
-			cout <<YEL<<"<32> characters"<<WHT<<endl;	
+			cout <<YEL<<"\t<32> characters"<<WHT<<endl;	
 			characters=32;	
 			cout<<custom_password_maker(characters, mood);
 			sys_ok();
 			break;	
 			}
 			
-			else if(((strcmp(argv[2], "take"))==0)||
-					((strcmp(argv[2], "-t"))==0)){
+			else if(((strcmp(argv[2], "LENGTH"))==0)||
+					((strcmp(argv[2], "length"))==0)||
+					((strcmp(argv[2], "-len"))==0)){
 			cout <<YEL<<"How many characters do you want your password to be?"<<WHT;cin >>characters;	
-			cout<<custom_password_maker(characters, mood);
-			sys_ok();
-			break;	
+			take_mood = custom_password_maker(characters, mood);
+				cout<<take_mood;
+				sys_ok();
+				break;	
+			}
+			else{
+				cout<<RED<<"Error :syintax error.";
+				sys_error();
+				break;
 			}
 		
 		}
@@ -193,7 +246,7 @@ int main(int argc , char *argv[]){
 			
 			
 			else if(((strcmp(argv[2], "8"))==0)){
-			cout <<YEL<<"<8> characters"<<WHT<<endl;
+			cout <<YEL<<"\t<8> characters"<<WHT<<endl;
 			characters=8;	
 			cout<<custom_password_maker(characters, mood);
 			sys_ok();
@@ -201,7 +254,7 @@ int main(int argc , char *argv[]){
 			}
 			
 			else if(((strcmp(argv[2], "16"))==0)){
-			cout <<YEL<<"<16> characters"<<WHT<<endl;	
+			cout <<YEL<<"\t<16> characters"<<WHT<<endl;	
 			characters=16;	
 			cout<<custom_password_maker(characters, mood);
 			sys_ok();
@@ -209,19 +262,26 @@ int main(int argc , char *argv[]){
 			}
 			
 			else if(((strcmp(argv[2], "32"))==0)){
-			cout <<YEL<<"<32> characters"<<WHT<<endl;	
+			cout <<YEL<<"\t<32> characters"<<WHT<<endl;	
 			characters=32;	
 			cout<<custom_password_maker(characters, mood);
 			sys_ok();
 			break;	
 			}
 			
-			else if(((strcmp(argv[2], "take"))==0)||
-					((strcmp(argv[2], "-t"))==0)){
+			else if(((strcmp(argv[2], "LENGTH"))==0)||
+					((strcmp(argv[2], "length"))==0)||
+					((strcmp(argv[2], "-len"))==0)){
 			cout <<YEL<<"How many characters do you want your password to be?"<<WHT;cin >>characters;	
-			cout<<custom_password_maker(characters, mood);
-			sys_ok();
-			break;	
+			take_mood = custom_password_maker(characters, mood);
+				cout<<take_mood;
+				sys_ok();
+				break;	
+			}
+			else{
+				cout<<RED<<"Error :syintax error.";
+				sys_error();
+				break;
 			}
 		}
 		//////////////////////////////
@@ -239,7 +299,7 @@ int main(int argc , char *argv[]){
 			
 			
 			else if(((strcmp(argv[2], "8"))==0)){
-			cout <<YEL<<"<8> characters"<<WHT<<endl;
+			cout <<YEL<<"\t<8> characters"<<WHT<<endl;
 			characters=8;	
 			cout<<custom_password_maker(characters, mood);
 			sys_ok();
@@ -247,7 +307,7 @@ int main(int argc , char *argv[]){
 			}
 			
 			else if(((strcmp(argv[2], "16"))==0)){
-			cout <<YEL<<"<16> characters"<<WHT<<endl;	
+			cout <<YEL<<"\t<16> characters"<<WHT<<endl;	
 			characters=16;	
 			cout<<custom_password_maker(characters, mood);
 			sys_ok();
@@ -255,19 +315,26 @@ int main(int argc , char *argv[]){
 			}
 			
 			else if(((strcmp(argv[2], "32"))==0)){
-			cout <<YEL<<"<32> characters"<<WHT<<endl;	
+			cout <<YEL<<"\t<32> characters"<<WHT<<endl;	
 			characters=32;	
 			cout<<custom_password_maker(characters, mood);
 			sys_ok();
 			break;	
 			}
 			
-			else if(((strcmp(argv[2], "take"))==0)||
-					((strcmp(argv[2], "-t"))==0)){
+			else if(((strcmp(argv[2], "LENGTH"))==0)||
+					((strcmp(argv[2], "length"))==0)||
+					((strcmp(argv[2], "-len"))==0)){
 			cout <<YEL<<"How many characters do you want your password to be?"<<WHT;cin >>characters;	
-			cout<<custom_password_maker(characters, mood);
-			sys_ok();
-			break;	
+			take_mood = custom_password_maker(characters, mood);
+				cout<<take_mood;
+				sys_ok();
+				break;	
+			}
+			else{
+				cout<<RED<<"Error :syintax error.";
+				sys_error();
+				break;
 			}
 		}
 		//////////////////////////////
@@ -284,7 +351,7 @@ int main(int argc , char *argv[]){
 			
 			
 			else if(((strcmp(argv[2], "8"))==0)){
-			cout <<YEL<<"<8> characters"<<WHT<<endl;
+			cout <<YEL<<"\t<8> characters"<<WHT<<endl;
 			characters=8;	
 			cout<<custom_password_maker(characters, mood);
 			sys_ok();
@@ -292,7 +359,7 @@ int main(int argc , char *argv[]){
 			}
 			
 			else if(((strcmp(argv[2], "16"))==0)){
-			cout <<YEL<<"<16> characters"<<WHT<<endl;	
+			cout <<YEL<<"\t<16> characters"<<WHT<<endl;	
 			characters=16;	
 			cout<<custom_password_maker(characters, mood);
 			sys_ok();
@@ -300,19 +367,26 @@ int main(int argc , char *argv[]){
 			}
 			
 			else if(((strcmp(argv[2], "32"))==0)){
-			cout <<YEL<<"<32> characters"<<WHT<<endl;	
+			cout <<YEL<<"\t<32> characters"<<WHT<<endl;	
 			characters=32;	
 			cout<<custom_password_maker(characters, mood);
 			sys_ok();
 			break;	
 			}
 			
-			else if(((strcmp(argv[2], "take"))==0)||
-					((strcmp(argv[2], "-t"))==0)){
+			else if(((strcmp(argv[2], "LENGTH"))==0)||
+					((strcmp(argv[2], "length"))==0)||
+					((strcmp(argv[2], "-len"))==0)){
 			cout <<YEL<<"How many characters do you want your password to be?"<<WHT;cin >>characters;	
-			cout<<custom_password_maker(characters, mood);
-			sys_ok();
-			break;	
+			take_mood = custom_password_maker(characters, mood);
+				cout<<take_mood;
+				sys_ok();
+				break;
+			}
+			else{
+				cout<<RED<<"Error :syintax error.";
+				sys_error();
+				break;
 			}
 		}
 		//////////////////////////////
@@ -329,7 +403,7 @@ int main(int argc , char *argv[]){
 			
 			
 			else if(((strcmp(argv[2], "8"))==0)){
-			cout <<YEL<<"<8> characters"<<WHT<<endl;
+			cout <<YEL<<"\t<8> characters"<<WHT<<endl;
 			characters=8;	
 			cout<<custom_password_maker(characters, mood);
 			sys_ok();
@@ -337,7 +411,7 @@ int main(int argc , char *argv[]){
 			}
 			
 			else if(((strcmp(argv[2], "16"))==0)){
-			cout <<YEL<<"<16> characters"<<WHT<<endl;	
+			cout <<YEL<<"\t<16> characters"<<WHT<<endl;	
 			characters=16;	
 			cout<<custom_password_maker(characters, mood);
 			sys_ok();
@@ -345,19 +419,26 @@ int main(int argc , char *argv[]){
 			}
 			
 			else if(((strcmp(argv[2], "32"))==0)){
-			cout <<YEL<<"<32> characters"<<WHT<<endl;	
+			cout <<YEL<<"\t<32> characters"<<WHT<<endl;	
 			characters=32;	
 			cout<<custom_password_maker(characters, mood);
 			sys_ok();
 			break;	
 			}
 			
-			else if(((strcmp(argv[2], "take"))==0)||
-					((strcmp(argv[2], "-t"))==0)){
+			else if(((strcmp(argv[2], "LENGTH"))==0)||
+					((strcmp(argv[2], "length"))==0)||
+					((strcmp(argv[2], "-len"))==0)){
 			cout <<YEL<<"How many characters do you want your password to be?"<<WHT;cin >>characters;	
-			cout<<custom_password_maker(characters, mood);
-			sys_ok();
-			break;	
+			take_mood = custom_password_maker(characters, mood);
+				cout<<take_mood;
+				sys_ok();
+				break;	
+			}
+			else{
+				cout<<RED<<"Error :syintax error.";
+				sys_error();
+			break;
 			}
 		}
 		//////////////////////////////
@@ -374,7 +455,7 @@ int main(int argc , char *argv[]){
 			
 			
 			else if(((strcmp(argv[2], "8"))==0)){
-			cout <<YEL<<"<8> characters"<<WHT<<endl;
+			cout <<YEL<<"\t<8> characters"<<WHT<<endl;
 			characters=8;	
 			cout<<custom_password_maker(characters, mood);
 			sys_ok();
@@ -382,7 +463,7 @@ int main(int argc , char *argv[]){
 			}
 			
 			else if(((strcmp(argv[2], "16"))==0)){
-			cout <<YEL<<"<16> characters"<<WHT<<endl;	
+			cout <<YEL<<"\t<16> characters"<<WHT<<endl;	
 			characters=16;	
 			cout<<custom_password_maker(characters, mood);
 			sys_ok();
@@ -390,20 +471,82 @@ int main(int argc , char *argv[]){
 			}
 			
 			else if(((strcmp(argv[2], "32"))==0)){
-			cout <<YEL<<"<32> characters"<<WHT<<endl;	
+			cout <<YEL<<"\t<32> characters"<<WHT<<endl;	
 			characters=32;	
-			cout<<custom_password_maker(characters, mood);
-			sys_ok();
-			break;	
+			take_mood = custom_password_maker(characters, mood);
+				cout<<take_mood;
+				sys_ok();
+				break;	
 			}
 			
-			else if(((strcmp(argv[2], "take"))==0)||
-					((strcmp(argv[2], "-t"))==0)){
+			else if(((strcmp(argv[2], "LENGTH"))==0)||
+					((strcmp(argv[2], "length"))==0)||
+					((strcmp(argv[2], "-len"))==0)){
 			cout <<YEL<<"How many characters do you want your password to be?"<<WHT;cin >>characters;	
 			cout<<custom_password_maker(characters, mood);
 			sys_ok();
 			break;	
 			}
+			else{
+			cout<<RED<<"Error :syintax error.";
+			sys_error();
+			break;
+			}
+		}
+		//////////////////////////////
+		else if(((strcmp(argv[1], "leet"))==0)||
+				((strcmp(argv[1], "1337"))==0)||
+				((strcmp(argv[1], "LEET"))==0)){
+			string mood="";
+			if(argc == 2){
+				
+				cout <<YEL<<"Enter your Keyboard-letters : "<<WHT;cin >>mood;cout<<endl;
+				string LEET=Leet_password(mood);
+				
+				if(LEET.size()<8){
+					cout<<RED<<"Warning:\n\tThis password is not secure because it is less than 8 characters long\n";
+					cout <<YEL<<"\t<"<<LEET.size()<<"> characters"<<WHT<<endl;
+					cout<<LEET;
+					sys_ok();
+					
+				}
+				else if(LEET.size()==8){
+					cout<<YEL<<"Medium safety\n";
+					cout <<YEL<<"\t<"<<LEET.size()<<"> characters"<<WHT<<endl;
+					cout<<LEET;
+					sys_ok();
+					
+				}
+				else if(LEET.size()<=16){
+					cout<<GRN<<"Superb safety\n";
+					cout <<YEL<<"\t<"<<LEET.size()<<"> characters"<<WHT<<endl;
+					cout<<LEET;
+					sys_ok();
+				}
+				else if(LEET.size()<=50){
+					cout<<GRN<<"Superb safety\n";
+					cout <<YEL<<"\t<"<<LEET.size()<<"> characters"<<WHT<<endl;
+					cout<<LEET;
+					sys_ok();
+				}
+				else if(LEET.size()>50){
+					cout <<YEL<<"\t<"<<LEET.size()<<"> characters"<<WHT<<endl;
+					cout<<RED<<"Error : letters should not exceed 50\n";
+					sys_error();
+				}
+				else{
+					cout<<RED<<"Error : letters must be in English.";
+					sys_error();
+				}
+				
+				break;	
+			}
+		}
+		//////////////////////////////
+		else{
+			cout<<RED<<"Error :syintax error.";
+			sys_error();
+			break;
 		}
 		
 	}

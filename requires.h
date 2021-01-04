@@ -21,6 +21,7 @@ using namespace std ;
 #include "wrong.cxx"
 #include "keyboard_letters.cxx"
 #include "password_maker.cxx"
+#include "Leet_password.cxx"
 ////////////////////////
 void LOGO();
 
@@ -38,3 +39,4 @@ string sign();
 
 string custom_password_maker(int unit,string mood);//custom
 
+string Leet_password(string leeter);

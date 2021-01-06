@@ -6,11 +6,11 @@ you can create your own password with any number of characters you want.
         █▀▄ █▀▀ ▀▀█ 		█▀▄ █▀▀ ▀▀█ 		█▀▄ █▀▀ ▀▀█
                                 		rp9|ok ! 	        rp9|ERROR !
 # Help :
-	~$ rp9 [-h , --help , help]
+	$ rp9 [-h , --help , help]
 # Version : 
-	~$ rp9 [-v , --version , version]
+	$ rp9 [-v , --version , version]
 # SYNOPSIS :
-	~$ rp9 [OPTION]... [LENGTH]
+	$ rp9 [OPTION]... [LENGTH]
 # OPTION :
 	-C , custom
 	>
@@ -38,8 +38,8 @@ you can create your own password with any number of characters you want.
 	-len , LENGTH, length
 	>
 # EXAMPLES :
-	~$ rp9 all 16
-	~$ rp9 -C -len
-	~$ rp9 upper 32
-	~$ rp9 1377
+	$ rp9 all 16
+	$ rp9 -C -len
+	$ rp9 upper 32
+	$ rp9 1377
 	...

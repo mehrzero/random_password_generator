@@ -1,4 +1,8 @@
-string Leet_password(string leeter) //standard_easy
+#include "leet_password.h"
+
+using namespace std;
+
+string leet_password(const string& letter) //standard_easy
 { 
 	string fin;
 	string Aleet[]={"4","/-\\","/\\","@","/\\","a","A"};//,"Д"

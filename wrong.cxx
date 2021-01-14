@@ -1,3 +1,10 @@
+#include "wrong.h"
+#include "colors.h"
+
+#include <iostream>
+
+using namespace std;
+
 void sys_error(){
 
     /*

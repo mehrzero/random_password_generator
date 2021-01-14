@@ -1,6 +1,9 @@
 #include <iostream>
 #include <string.h>
 #include "requires.h"
+
+using namespace std;
+
 /*
  * Random Password Generator = rp9
  */
@@ -130,7 +133,7 @@ int main(int argc , char *argv[]){
 		        ((strcmp(argv[1], "-ulns"))==0)||
 		        ((strcmp(argv[1], "upperlowernumbersign"))==0)||	
 				((strcmp(argv[1], "-a"))==0)){
-			string mood=uppercase()+lowercase()+number()+sign();		
+			string mood=uppercase+lowercase+number+sign;		
 			if(argc == 2){
 			cout <<YEL<<"The default is <16> characters"<<WHT<<endl;	
 			characters=16;
@@ -182,7 +185,7 @@ int main(int argc , char *argv[]){
 		///////////////////////////////////////
 		else if(((strcmp(argv[1], "upper"))==0)||
 				((strcmp(argv[1], "-u"))==0)){
-			string mood=uppercase();		
+			string mood=uppercase;		
 			if(argc == 2){
 			cout <<YEL<<"The default is <16> characters"<<WHT<<endl;	
 			characters=16;
@@ -392,7 +395,7 @@ int main(int argc , char *argv[]){
 		//////////////////////////////
 		else if(((strcmp(argv[1], "upperlower"))==0)||
 				((strcmp(argv[1], "-ul"))==0)){
-			string mood=uppercase()+lowercase();		
+			string mood=uppercase+lowercase;		
 			if(argc == 2){
 			cout <<YEL<<"The default is <16> characters"<<WHT<<endl;	
 			characters=16;
@@ -444,7 +447,7 @@ int main(int argc , char *argv[]){
 		//////////////////////////////
 		else if(((strcmp(argv[1], "upperlowernumber"))==0)||
 				((strcmp(argv[1], "-uln"))==0)){
-			string mood=uppercase()+lowercase()+number();		
+			string mood=uppercase+lowercase+number;		
 			if(argc == 2){
 			cout <<YEL<<"The default is <16> characters"<<WHT<<endl;	
 			characters=16;

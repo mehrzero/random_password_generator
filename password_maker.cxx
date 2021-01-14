@@ -1,7 +1,11 @@
+#include "password_maker.h"
+
+using namespace std;
+
 //int unit
 //string mood
 //////////////////////
-string custom_password_maker(int unit,string mood){
+string custom_password_maker(const int unit, const string& mood) {
 
 	string pass="";
     int size = mood.size() - 1;

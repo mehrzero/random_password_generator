@@ -3,9 +3,11 @@
 
 #include <iostream>
 
+namespace core {
 inline void LOGO() {
-  std::cout<<"  █▀█ █▀█ █▀█\n"
+  std::cout << "  █▀█ █▀█ █▀█\n"
             "  █▀▄ █▀▀ ▀▀█";
+}
 }
 
 #endif

@@ -13,7 +13,7 @@ void sys_error() {
    */
   cout << endl;
   cout << core::colors::red;
-  LOGO();
+  core::LOGO();
   cout << endl << "\trp9|ERROR ! \n";
 
 }
@@ -25,6 +25,6 @@ void sys_ok() {
    */
   cout << endl;
   cout << core::colors::green;
-  LOGO();
+  core::LOGO();
   cout << endl << "\trp9|OK ! \n";
 }

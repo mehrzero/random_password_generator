@@ -16,7 +16,7 @@ int main(int argc, char* argv[]) {
 
     if (argc == 1) {
       sys_error();
-      cout << RED << "please enter a command(after rp9).\n"
+      cout << core::colors::red << "please enter a command(after rp9).\n"
            "for see the all command : $ rp9 help\n";
     }
     //version
@@ -43,8 +43,8 @@ int main(int argc, char* argv[]) {
       string mood = "";
       if (argc == 2) {
         characters = 16;
-        cout << YEL << "The default is <16> characters" << WHT << endl;
-        cout << YEL << "Enter your Keyboard-letters : " << WHT; cin >> mood; cout << endl;
+        cout << core::colors::yellow << "The default is <16> characters" << core::colors::white << endl;
+        cout << core::colors::yellow << "Enter your Keyboard-letters : " << core::colors::white; cin >> mood; cout << endl;
         cout << custom_password_maker(characters, mood);
         sys_ok();
         break;
@@ -53,8 +53,8 @@ int main(int argc, char* argv[]) {
 
       else if (((strcmp(argv[2], "8")) == 0)) {
         characters = 8;
-        cout << YEL << "\t<8> characters" << WHT << endl;
-        cout << YEL << "Enter your Keyboard-letters : " << WHT; cin >> mood; cout << endl;
+        cout << core::colors::yellow << "\t<8> characters" << core::colors::white << endl;
+        cout << core::colors::yellow << "Enter your Keyboard-letters : " << core::colors::white; cin >> mood; cout << endl;
         cout << custom_password_maker(characters, mood);
         sys_ok();
         break;
@@ -62,8 +62,8 @@ int main(int argc, char* argv[]) {
 
       else if (((strcmp(argv[2], "16")) == 0)) {
         characters = 16;
-        cout << YEL << "\t<16> characters" << WHT << endl;
-        cout << YEL << "Enter your Keyboard-letters : " << WHT; cin >> mood; cout << endl;
+        cout << core::colors::yellow << "\t<16> characters" << core::colors::white << endl;
+        cout << core::colors::yellow << "Enter your Keyboard-letters : " << core::colors::white; cin >> mood; cout << endl;
         cout << custom_password_maker(characters, mood);
         sys_ok();
         break;
@@ -71,8 +71,8 @@ int main(int argc, char* argv[]) {
 
       else if (((strcmp(argv[2], "32")) == 0)) {
         characters = 32;
-        cout << YEL << "\t<32> characters" << WHT << endl;
-        cout << YEL << "Enter your Keyboard-letters : " << WHT; cin >> mood; cout << endl;
+        cout << core::colors::yellow << "\t<32> characters" << core::colors::white << endl;
+        cout << core::colors::yellow << "Enter your Keyboard-letters : " << core::colors::white; cin >> mood; cout << endl;
         cout << custom_password_maker(characters, mood);
         sys_ok();
         break;
@@ -82,9 +82,9 @@ int main(int argc, char* argv[]) {
                ((strcmp(argv[2], "length")) == 0) ||
                ((strcmp(argv[2], "-len")) == 0)) {
 
-        cout << YEL << "How many characters do you want your password to be?" << WHT; cin >> characters;
-        cout << YEL << "<" << characters << "> characters" << WHT << endl;
-        cout << YEL << "Enter your Keyboard-letters : " << WHT; cin >> mood; cout << endl;
+        cout << core::colors::yellow << "How many characters do you want your password to be?" << core::colors::white; cin >> characters;
+        cout << core::colors::yellow << "<" << characters << "> characters" << core::colors::white << endl;
+        cout << core::colors::yellow << "Enter your Keyboard-letters : " << core::colors::white; cin >> mood; cout << endl;
         take_mood = custom_password_maker(characters, mood);
         cout << take_mood;
         sys_ok();
@@ -120,7 +120,7 @@ int main(int argc, char* argv[]) {
         *
         *///
       } else {
-        cout << RED << "Error :syintax error.";
+        cout << core::colors::red << "Error :syintax error.";
         sys_error();
         break;
       }
@@ -134,7 +134,7 @@ int main(int argc, char* argv[]) {
              ((strcmp(argv[1], "-a")) == 0)) {
       string mood = core::uppercase + core::lowercase + core::number + core::sign;
       if (argc == 2) {
-        cout << YEL << "The default is <16> characters" << WHT << endl;
+        cout << core::colors::yellow << "The default is <16> characters" << core::colors::white << endl;
         characters = 16;
         cout << custom_password_maker(characters, mood);
         sys_ok();
@@ -143,7 +143,7 @@ int main(int argc, char* argv[]) {
 
 
       else if (((strcmp(argv[2], "8")) == 0)) {
-        cout << YEL << "\t<8> characters" << WHT << endl;
+        cout << core::colors::yellow << "\t<8> characters" << core::colors::white << endl;
         characters = 8;
         cout << custom_password_maker(characters, mood);
         sys_ok();
@@ -151,7 +151,7 @@ int main(int argc, char* argv[]) {
       }
 
       else if (((strcmp(argv[2], "16")) == 0)) {
-        cout << YEL << "\t<16> characters" << WHT << endl;
+        cout << core::colors::yellow << "\t<16> characters" << core::colors::white << endl;
         characters = 16;
         cout << custom_password_maker(characters, mood);
         sys_ok();
@@ -159,7 +159,7 @@ int main(int argc, char* argv[]) {
       }
 
       else if (((strcmp(argv[2], "32")) == 0)) {
-        cout << YEL << "\t<32> characters" << WHT << endl;
+        cout << core::colors::yellow << "\t<32> characters" << core::colors::white << endl;
         characters = 32;
         cout << custom_password_maker(characters, mood);
         sys_ok();
@@ -169,13 +169,13 @@ int main(int argc, char* argv[]) {
       else if (((strcmp(argv[2], "LENGTH")) == 0) ||
                ((strcmp(argv[2], "length")) == 0) ||
                ((strcmp(argv[2], "-len")) == 0)) {
-        cout << YEL << "How many characters do you want your password to be?" << WHT; cin >> characters;
+        cout << core::colors::yellow << "How many characters do you want your password to be?" << core::colors::white; cin >> characters;
         take_mood = custom_password_maker(characters, mood);
         cout << take_mood;
         sys_ok();
         break;
       } else {
-        cout << RED << "Error :syintax error.";
+        cout << core::colors::red << "Error :syintax error.";
         sys_error();
         break;
       }
@@ -185,7 +185,7 @@ int main(int argc, char* argv[]) {
              ((strcmp(argv[1], "-u")) == 0)) {
       string mood = core::uppercase;
       if (argc == 2) {
-        cout << YEL << "The default is <16> characters" << WHT << endl;
+        cout << core::colors::yellow << "The default is <16> characters" << core::colors::white << endl;
         characters = 16;
         cout << custom_password_maker(characters, mood);
         sys_ok();
@@ -194,7 +194,7 @@ int main(int argc, char* argv[]) {
 
 
       else if (((strcmp(argv[2], "8")) == 0)) {
-        cout << YEL << "\t<8> characters" << WHT << endl;
+        cout << core::colors::yellow << "\t<8> characters" << core::colors::white << endl;
         characters = 8;
         cout << custom_password_maker(characters, mood);
         sys_ok();
@@ -202,7 +202,7 @@ int main(int argc, char* argv[]) {
       }
 
       else if (((strcmp(argv[2], "16")) == 0)) {
-        cout << YEL << "\t<16> characters" << WHT << endl;
+        cout << core::colors::yellow << "\t<16> characters" << core::colors::white << endl;
         characters = 16;
         cout << custom_password_maker(characters, mood);
         sys_ok();
@@ -210,7 +210,7 @@ int main(int argc, char* argv[]) {
       }
 
       else if (((strcmp(argv[2], "32")) == 0)) {
-        cout << YEL << "\t<32> characters" << WHT << endl;
+        cout << core::colors::yellow << "\t<32> characters" << core::colors::white << endl;
         characters = 32;
         cout << custom_password_maker(characters, mood);
         sys_ok();
@@ -220,13 +220,13 @@ int main(int argc, char* argv[]) {
       else if (((strcmp(argv[2], "LENGTH")) == 0) ||
                ((strcmp(argv[2], "length")) == 0) ||
                ((strcmp(argv[2], "-len")) == 0)) {
-        cout << YEL << "How many characters do you want your password to be?" << WHT; cin >> characters;
+        cout << core::colors::yellow << "How many characters do you want your password to be?" << core::colors::white; cin >> characters;
         take_mood = custom_password_maker(characters, mood);
         cout << take_mood;
         sys_ok();
         break;
       } else {
-        cout << RED << "Error :syintax error.";
+        cout << core::colors::red << "Error :syintax error.";
         sys_error();
         break;
       }
@@ -237,7 +237,7 @@ int main(int argc, char* argv[]) {
              ((strcmp(argv[1], "-l")) == 0)) {
       string mood = core::lowercase;
       if (argc == 2) {
-        cout << YEL << "The default is <16> characters" << WHT << endl;
+        cout << core::colors::yellow << "The default is <16> characters" << core::colors::white << endl;
         characters = 16;
         cout << custom_password_maker(characters, mood);
         sys_ok();
@@ -246,7 +246,7 @@ int main(int argc, char* argv[]) {
 
 
       else if (((strcmp(argv[2], "8")) == 0)) {
-        cout << YEL << "\t<8> characters" << WHT << endl;
+        cout << core::colors::yellow << "\t<8> characters" << core::colors::white << endl;
         characters = 8;
         cout << custom_password_maker(characters, mood);
         sys_ok();
@@ -254,7 +254,7 @@ int main(int argc, char* argv[]) {
       }
 
       else if (((strcmp(argv[2], "16")) == 0)) {
-        cout << YEL << "\t<16> characters" << WHT << endl;
+        cout << core::colors::yellow << "\t<16> characters" << core::colors::white << endl;
         characters = 16;
         cout << custom_password_maker(characters, mood);
         sys_ok();
@@ -262,7 +262,7 @@ int main(int argc, char* argv[]) {
       }
 
       else if (((strcmp(argv[2], "32")) == 0)) {
-        cout << YEL << "\t<32> characters" << WHT << endl;
+        cout << core::colors::yellow << "\t<32> characters" << core::colors::white << endl;
         characters = 32;
         cout << custom_password_maker(characters, mood);
         sys_ok();
@@ -272,13 +272,13 @@ int main(int argc, char* argv[]) {
       else if (((strcmp(argv[2], "LENGTH")) == 0) ||
                ((strcmp(argv[2], "length")) == 0) ||
                ((strcmp(argv[2], "-len")) == 0)) {
-        cout << YEL << "How many characters do you want your password to be?" << WHT; cin >> characters;
+        cout << core::colors::yellow << "How many characters do you want your password to be?" << core::colors::white; cin >> characters;
         take_mood = custom_password_maker(characters, mood);
         cout << take_mood;
         sys_ok();
         break;
       } else {
-        cout << RED << "Error :syintax error.";
+        cout << core::colors::red << "Error :syintax error.";
         sys_error();
         break;
       }
@@ -289,7 +289,7 @@ int main(int argc, char* argv[]) {
              ((strcmp(argv[1], "-n")) == 0)) {
       string mood = core::number;
       if (argc == 2) {
-        cout << YEL << "The default is <16> characters" << WHT << endl;
+        cout << core::colors::yellow << "The default is <16> characters" << core::colors::white << endl;
         characters = 16;
         cout << custom_password_maker(characters, mood);
         sys_ok();
@@ -298,7 +298,7 @@ int main(int argc, char* argv[]) {
 
 
       else if (((strcmp(argv[2], "8")) == 0)) {
-        cout << YEL << "\t<8> characters" << WHT << endl;
+        cout << core::colors::yellow << "\t<8> characters" << core::colors::white << endl;
         characters = 8;
         cout << custom_password_maker(characters, mood);
         sys_ok();
@@ -306,7 +306,7 @@ int main(int argc, char* argv[]) {
       }
 
       else if (((strcmp(argv[2], "16")) == 0)) {
-        cout << YEL << "\t<16> characters" << WHT << endl;
+        cout << core::colors::yellow << "\t<16> characters" << core::colors::white << endl;
         characters = 16;
         cout << custom_password_maker(characters, mood);
         sys_ok();
@@ -314,7 +314,7 @@ int main(int argc, char* argv[]) {
       }
 
       else if (((strcmp(argv[2], "32")) == 0)) {
-        cout << YEL << "\t<32> characters" << WHT << endl;
+        cout << core::colors::yellow << "\t<32> characters" << core::colors::white << endl;
         characters = 32;
         cout << custom_password_maker(characters, mood);
         sys_ok();
@@ -324,13 +324,13 @@ int main(int argc, char* argv[]) {
       else if (((strcmp(argv[2], "LENGTH")) == 0) ||
                ((strcmp(argv[2], "length")) == 0) ||
                ((strcmp(argv[2], "-len")) == 0)) {
-        cout << YEL << "How many characters do you want your password to be?" << WHT; cin >> characters;
+        cout << core::colors::yellow << "How many characters do you want your password to be?" << core::colors::white; cin >> characters;
         take_mood = custom_password_maker(characters, mood);
         cout << take_mood;
         sys_ok();
         break;
       } else {
-        cout << RED << "Error :syintax error.";
+        cout << core::colors::red << "Error :syintax error.";
         sys_error();
         break;
       }
@@ -340,7 +340,7 @@ int main(int argc, char* argv[]) {
              ((strcmp(argv[1], "-s")) == 0)) {
       string mood = core::sign;
       if (argc == 2) {
-        cout << YEL << "The default is <16> characters" << WHT << endl;
+        cout << core::colors::yellow << "The default is <16> characters" << core::colors::white << endl;
         characters = 16;
         cout << custom_password_maker(characters, mood);
         sys_ok();
@@ -349,7 +349,7 @@ int main(int argc, char* argv[]) {
 
 
       else if (((strcmp(argv[2], "8")) == 0)) {
-        cout << YEL << "\t<8> characters" << WHT << endl;
+        cout << core::colors::yellow << "\t<8> characters" << core::colors::white << endl;
         characters = 8;
         cout << custom_password_maker(characters, mood);
         sys_ok();
@@ -357,7 +357,7 @@ int main(int argc, char* argv[]) {
       }
 
       else if (((strcmp(argv[2], "16")) == 0)) {
-        cout << YEL << "\t<16> characters" << WHT << endl;
+        cout << core::colors::yellow << "\t<16> characters" << core::colors::white << endl;
         characters = 16;
         cout << custom_password_maker(characters, mood);
         sys_ok();
@@ -365,7 +365,7 @@ int main(int argc, char* argv[]) {
       }
 
       else if (((strcmp(argv[2], "32")) == 0)) {
-        cout << YEL << "\t<32> characters" << WHT << endl;
+        cout << core::colors::yellow << "\t<32> characters" << core::colors::white << endl;
         characters = 32;
         cout << custom_password_maker(characters, mood);
         sys_ok();
@@ -375,13 +375,13 @@ int main(int argc, char* argv[]) {
       else if (((strcmp(argv[2], "LENGTH")) == 0) ||
                ((strcmp(argv[2], "length")) == 0) ||
                ((strcmp(argv[2], "-len")) == 0)) {
-        cout << YEL << "How many characters do you want your password to be?" << WHT; cin >> characters;
+        cout << core::colors::yellow << "How many characters do you want your password to be?" << core::colors::white; cin >> characters;
         take_mood = custom_password_maker(characters, mood);
         cout << take_mood;
         sys_ok();
         break;
       } else {
-        cout << RED << "Error :syintax error.";
+        cout << core::colors::red << "Error :syintax error.";
         sys_error();
         break;
       }
@@ -391,7 +391,7 @@ int main(int argc, char* argv[]) {
              ((strcmp(argv[1], "-ul")) == 0)) {
       string mood = core::uppercase + core::lowercase;
       if (argc == 2) {
-        cout << YEL << "The default is <16> characters" << WHT << endl;
+        cout << core::colors::yellow << "The default is <16> characters" << core::colors::white << endl;
         characters = 16;
         cout << custom_password_maker(characters, mood);
         sys_ok();
@@ -400,7 +400,7 @@ int main(int argc, char* argv[]) {
 
 
       else if (((strcmp(argv[2], "8")) == 0)) {
-        cout << YEL << "\t<8> characters" << WHT << endl;
+        cout << core::colors::yellow << "\t<8> characters" << core::colors::white << endl;
         characters = 8;
         cout << custom_password_maker(characters, mood);
         sys_ok();
@@ -408,7 +408,7 @@ int main(int argc, char* argv[]) {
       }
 
       else if (((strcmp(argv[2], "16")) == 0)) {
-        cout << YEL << "\t<16> characters" << WHT << endl;
+        cout << core::colors::yellow << "\t<16> characters" << core::colors::white << endl;
         characters = 16;
         cout << custom_password_maker(characters, mood);
         sys_ok();
@@ -416,7 +416,7 @@ int main(int argc, char* argv[]) {
       }
 
       else if (((strcmp(argv[2], "32")) == 0)) {
-        cout << YEL << "\t<32> characters" << WHT << endl;
+        cout << core::colors::yellow << "\t<32> characters" << core::colors::white << endl;
         characters = 32;
         cout << custom_password_maker(characters, mood);
         sys_ok();
@@ -426,13 +426,13 @@ int main(int argc, char* argv[]) {
       else if (((strcmp(argv[2], "LENGTH")) == 0) ||
                ((strcmp(argv[2], "length")) == 0) ||
                ((strcmp(argv[2], "-len")) == 0)) {
-        cout << YEL << "How many characters do you want your password to be?" << WHT; cin >> characters;
+        cout << core::colors::yellow << "How many characters do you want your password to be?" << core::colors::white; cin >> characters;
         take_mood = custom_password_maker(characters, mood);
         cout << take_mood;
         sys_ok();
         break;
       } else {
-        cout << RED << "Error :syintax error.";
+        cout << core::colors::red << "Error :syintax error.";
         sys_error();
         break;
       }
@@ -442,7 +442,7 @@ int main(int argc, char* argv[]) {
              ((strcmp(argv[1], "-uln")) == 0)) {
       string mood = core::uppercase + core::lowercase + core::number;
       if (argc == 2) {
-        cout << YEL << "The default is <16> characters" << WHT << endl;
+        cout << core::colors::yellow << "The default is <16> characters" << core::colors::white << endl;
         characters = 16;
         cout << custom_password_maker(characters, mood);
         sys_ok();
@@ -451,7 +451,7 @@ int main(int argc, char* argv[]) {
 
 
       else if (((strcmp(argv[2], "8")) == 0)) {
-        cout << YEL << "\t<8> characters" << WHT << endl;
+        cout << core::colors::yellow << "\t<8> characters" << core::colors::white << endl;
         characters = 8;
         cout << custom_password_maker(characters, mood);
         sys_ok();
@@ -459,7 +459,7 @@ int main(int argc, char* argv[]) {
       }
 
       else if (((strcmp(argv[2], "16")) == 0)) {
-        cout << YEL << "\t<16> characters" << WHT << endl;
+        cout << core::colors::yellow << "\t<16> characters" << core::colors::white << endl;
         characters = 16;
         cout << custom_password_maker(characters, mood);
         sys_ok();
@@ -467,7 +467,7 @@ int main(int argc, char* argv[]) {
       }
 
       else if (((strcmp(argv[2], "32")) == 0)) {
-        cout << YEL << "\t<32> characters" << WHT << endl;
+        cout << core::colors::yellow << "\t<32> characters" << core::colors::white << endl;
         characters = 32;
         take_mood = custom_password_maker(characters, mood);
         cout << take_mood;
@@ -478,12 +478,12 @@ int main(int argc, char* argv[]) {
       else if (((strcmp(argv[2], "LENGTH")) == 0) ||
                ((strcmp(argv[2], "length")) == 0) ||
                ((strcmp(argv[2], "-len")) == 0)) {
-        cout << YEL << "How many characters do you want your password to be?" << WHT; cin >> characters;
+        cout << core::colors::yellow << "How many characters do you want your password to be?" << core::colors::white; cin >> characters;
         cout << custom_password_maker(characters, mood);
         sys_ok();
         break;
       } else {
-        cout << RED << "Error :syintax error.";
+        cout << core::colors::red << "Error :syintax error.";
         sys_error();
         break;
       }
@@ -495,37 +495,37 @@ int main(int argc, char* argv[]) {
       string mood = "";
       if (argc == 2) {
 
-        cout << YEL << "Enter your Keyboard-letters : " << WHT; cin >> mood; cout << endl;
+        cout << core::colors::yellow << "Enter your Keyboard-letters : " << core::colors::white; cin >> mood; cout << endl;
         string LEET = leet_password(mood);
 
         if (LEET.size() < 8) {
-          cout << RED << "Warning:\n\tThis password is not secure because it is less than 8 characters long\n";
-          cout << YEL << "\t<" << LEET.size() << "> characters" << WHT << endl;
+          cout << core::colors::red << "Warning:\n\tThis password is not secure because it is less than 8 characters long\n";
+          cout << core::colors::yellow << "\t<" << LEET.size() << "> characters" << core::colors::white << endl;
           cout << LEET;
           sys_ok();
 
         } else if (LEET.size() == 8) {
-          cout << YEL << "Medium safety\n";
-          cout << YEL << "\t<" << LEET.size() << "> characters" << WHT << endl;
+          cout << core::colors::yellow << "Medium safety\n";
+          cout << core::colors::yellow << "\t<" << LEET.size() << "> characters" << core::colors::white << endl;
           cout << LEET;
           sys_ok();
 
         } else if (LEET.size() <= 16) {
-          cout << GRN << "Superb safety\n";
-          cout << YEL << "\t<" << LEET.size() << "> characters" << WHT << endl;
+          cout << core::colors::green << "Superb safety\n";
+          cout << core::colors::yellow << "\t<" << LEET.size() << "> characters" << core::colors::white << endl;
           cout << LEET;
           sys_ok();
         } else if (LEET.size() <= 50) {
-          cout << GRN << "Superb safety\n";
-          cout << YEL << "\t<" << LEET.size() << "> characters" << WHT << endl;
+          cout << core::colors::green << "Superb safety\n";
+          cout << core::colors::yellow << "\t<" << LEET.size() << "> characters" << core::colors::white << endl;
           cout << LEET;
           sys_ok();
         } else if (LEET.size() > 50) {
-          cout << YEL << "\t<" << LEET.size() << "> characters" << WHT << endl;
-          cout << RED << "Error : letters should not exceed 50\n";
+          cout << core::colors::yellow << "\t<" << LEET.size() << "> characters" << core::colors::white << endl;
+          cout << core::colors::red << "Error : letters should not exceed 50\n";
           sys_error();
         } else {
-          cout << RED << "Error : letters must be in English.";
+          cout << core::colors::red << "Error : letters must be in English.";
           sys_error();
         }
 
@@ -534,7 +534,7 @@ int main(int argc, char* argv[]) {
     }
     //////////////////////////////
     else {
-      cout << RED << "Error :syintax error.";
+      cout << core::colors::red << "Error :syintax error.";
       sys_error();
       break;
     }

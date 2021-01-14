@@ -2,16 +2,15 @@
 #define COLORS_HEADER_FILE
 
 ////////////////////////
-    //color zone
+//color zone
 ////////////////////////
 
-#define NRM  "\x1B[0m"
-#define RED  "\x1B[31m"
-#define GRN  "\x1B[32m"
-#define YEL  "\x1B[33m"
-#define BLU  "\x1B[34m"
-#define MAG  "\x1B[35m"
-#define CYN  "\x1B[36m"
-#define WHT  "\x1B[37m"
+namespace core::colors {
+constexpr auto normal = "\x1B[0m";
+constexpr auto red = "\x1B[31m";
+constexpr auto green = "\x1B[32m";
+constexpr auto yellow = "\x1B[33m";
+constexpr auto white = "\x1B[37m";
+}
 
 #endif

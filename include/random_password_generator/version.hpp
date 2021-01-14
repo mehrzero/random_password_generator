@@ -6,7 +6,7 @@
 #include "colors.h"
 
 inline void version() {
-  std::cout << YEL << "version 1\n \"2021 1 jan\"";
+  std::cout << core::colors::yellow << "version 1\n \"2021 1 jan\"";
 }
 
 #endif

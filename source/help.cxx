@@ -6,16 +6,16 @@
 void help() {
   using namespace std;
 
-  cout << WHT << endl;
-  cout << YEL << " LOGO" << WHT << endl;
+  cout << core::colors::white << endl;
+  cout << core::colors::yellow << " LOGO" << core::colors::white << endl;
   cout << "\t  █▀█ █▀█ █▀█\n";
   cout << "\t  █▀▄ █▀▀ ▀▀█\n";
-  cout << YEL << " NAME" << WHT << endl;
-  cout << GRN << "\trp9 - Random Password Generator" << WHT << endl;
-  cout << YEL << " SYNOPSIS" << WHT << endl;
-  cout << GRN << "\t~$ rp9 [OPTION]... [LENGTH]" << WHT << endl;
-  cout << YEL << " DESCRIPTION :" << WHT << endl;
-  cout << GRN << "\tUsing uppercase and lowercase letters, numbers, symbols(sign),\n\t you can create your own password with any number of characters you want. \n"
+  cout << core::colors::yellow << " NAME" << core::colors::white << endl;
+  cout << core::colors::green << "\trp9 - Random Password Generator" << core::colors::white << endl;
+  cout << core::colors::yellow << " SYNOPSIS" << core::colors::white << endl;
+  cout << core::colors::green << "\t~$ rp9 [OPTION]... [LENGTH]" << core::colors::white << endl;
+  cout << core::colors::yellow << " DESCRIPTION :" << core::colors::white << endl;
+  cout << core::colors::green << "\tUsing uppercase and lowercase letters, numbers, symbols(sign),\n\t you can create your own password with any number of characters you want. \n"
 
        "\tHelp :\n"
        "\t~$ rp9 [-h , --help , help]\n"
@@ -51,5 +51,5 @@ void help() {
        "\t~$ rp9 upper 32\n"
        "\t~$ rp9 1377\n"
 
-       << WHT << endl;
+       << core::colors::white << endl;
 }

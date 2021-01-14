@@ -6,6 +6,7 @@
 
 using namespace std;
 
+namespace core {
 void sys_error() {
 
   /*
@@ -27,4 +28,5 @@ void sys_ok() {
   cout << core::colors::green;
   core::LOGO();
   cout << endl << "\trp9|OK ! \n";
+}
 }

@@ -3,6 +3,8 @@
 
 #include <string>
 
+namespace core {
 std::string leet_password(const std::string& letters);
+}
 
 #endif

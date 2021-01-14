@@ -496,7 +496,7 @@ int main(int argc, char* argv[]) {
       if (argc == 2) {
 
         cout << core::colors::yellow << "Enter your Keyboard-letters : " << core::colors::white; cin >> mood; cout << endl;
-        string LEET = leet_password(mood);
+        string LEET = core::leet_password(mood);
 
         if (LEET.size() < 8) {
           cout << core::colors::red << "Warning:\n\tThis password is not secure because it is less than 8 characters long\n";

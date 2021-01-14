@@ -2,7 +2,7 @@
 
 using namespace std;
 
-string leet_password(const string& letter) { //standard_easy
+string core::leet_password(const string& letter) { //standard_easy
   string fin;
   string Aleet[] = {"4", "/-\\", "/\\", "@", "/\\", "a", "A"}; //,"Д"
   string A = "";

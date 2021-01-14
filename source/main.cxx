@@ -132,7 +132,7 @@ int main(int argc, char* argv[]) {
              ((strcmp(argv[1], "-ulns")) == 0) ||
              ((strcmp(argv[1], "upperlowernumbersign")) == 0) ||
              ((strcmp(argv[1], "-a")) == 0)) {
-      string mood = uppercase + lowercase + number + sign;
+      string mood = core::uppercase + core::lowercase + core::number + core::sign;
       if (argc == 2) {
         cout << YEL << "The default is <16> characters" << WHT << endl;
         characters = 16;
@@ -183,7 +183,7 @@ int main(int argc, char* argv[]) {
     ///////////////////////////////////////
     else if (((strcmp(argv[1], "upper")) == 0) ||
              ((strcmp(argv[1], "-u")) == 0)) {
-      string mood = uppercase;
+      string mood = core::uppercase;
       if (argc == 2) {
         cout << YEL << "The default is <16> characters" << WHT << endl;
         characters = 16;
@@ -235,7 +235,7 @@ int main(int argc, char* argv[]) {
     ///////////////////////////////////////
     else if (((strcmp(argv[1], "lower")) == 0) ||
              ((strcmp(argv[1], "-l")) == 0)) {
-      string mood = lowercase();
+      string mood = core::lowercase;
       if (argc == 2) {
         cout << YEL << "The default is <16> characters" << WHT << endl;
         characters = 16;
@@ -287,7 +287,7 @@ int main(int argc, char* argv[]) {
 
     else if (((strcmp(argv[1], "number")) == 0) ||
              ((strcmp(argv[1], "-n")) == 0)) {
-      string mood = number();
+      string mood = core::number;
       if (argc == 2) {
         cout << YEL << "The default is <16> characters" << WHT << endl;
         characters = 16;
@@ -338,7 +338,7 @@ int main(int argc, char* argv[]) {
     //////////////////////////////
     else if (((strcmp(argv[1], "sign")) == 0) ||
              ((strcmp(argv[1], "-s")) == 0)) {
-      string mood = sign();
+      string mood = core::sign;
       if (argc == 2) {
         cout << YEL << "The default is <16> characters" << WHT << endl;
         characters = 16;
@@ -389,7 +389,7 @@ int main(int argc, char* argv[]) {
     //////////////////////////////
     else if (((strcmp(argv[1], "upperlower")) == 0) ||
              ((strcmp(argv[1], "-ul")) == 0)) {
-      string mood = uppercase + lowercase;
+      string mood = core::uppercase + core::lowercase;
       if (argc == 2) {
         cout << YEL << "The default is <16> characters" << WHT << endl;
         characters = 16;
@@ -440,7 +440,7 @@ int main(int argc, char* argv[]) {
     //////////////////////////////
     else if (((strcmp(argv[1], "upperlowernumber")) == 0) ||
              ((strcmp(argv[1], "-uln")) == 0)) {
-      string mood = uppercase + lowercase + number;
+      string mood = core::uppercase + core::lowercase + core::number;
       if (argc == 2) {
         cout << YEL << "The default is <16> characters" << WHT << endl;
         characters = 16;
@@ -496,7 +496,7 @@ int main(int argc, char* argv[]) {
       if (argc == 2) {
 
         cout << YEL << "Enter your Keyboard-letters : " << WHT; cin >> mood; cout << endl;
-        string LEET = Leet_password(mood);
+        string LEET = leet_password(mood);
 
         if (LEET.size() < 8) {
           cout << RED << "Warning:\n\tThis password is not secure because it is less than 8 characters long\n";

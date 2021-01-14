@@ -1,0 +1,3 @@
+--style=google -p
+indent=spaces=2
+delete-empty-lines

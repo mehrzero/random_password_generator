@@ -37,7 +37,7 @@ int main(int argc, char* argv[]) {
       sys_ok();
       break;
     }
-    //////custom_password_maker(int unit,string mood)
+    //////core::custom_password_maker(int unit,string mood)
     else if (((strcmp(argv[1], "custom")) == 0) ||
              ((strcmp(argv[1], "-C")) == 0)) {
       string mood = "";
@@ -45,7 +45,7 @@ int main(int argc, char* argv[]) {
         characters = 16;
         cout << core::colors::yellow << "The default is <16> characters" << core::colors::white << endl;
         cout << core::colors::yellow << "Enter your Keyboard-letters : " << core::colors::white; cin >> mood; cout << endl;
-        cout << custom_password_maker(characters, mood);
+        cout << core::custom_password_maker(characters, mood);
         sys_ok();
         break;
       }
@@ -55,7 +55,7 @@ int main(int argc, char* argv[]) {
         characters = 8;
         cout << core::colors::yellow << "\t<8> characters" << core::colors::white << endl;
         cout << core::colors::yellow << "Enter your Keyboard-letters : " << core::colors::white; cin >> mood; cout << endl;
-        cout << custom_password_maker(characters, mood);
+        cout << core::custom_password_maker(characters, mood);
         sys_ok();
         break;
       }
@@ -64,7 +64,7 @@ int main(int argc, char* argv[]) {
         characters = 16;
         cout << core::colors::yellow << "\t<16> characters" << core::colors::white << endl;
         cout << core::colors::yellow << "Enter your Keyboard-letters : " << core::colors::white; cin >> mood; cout << endl;
-        cout << custom_password_maker(characters, mood);
+        cout << core::custom_password_maker(characters, mood);
         sys_ok();
         break;
       }
@@ -73,7 +73,7 @@ int main(int argc, char* argv[]) {
         characters = 32;
         cout << core::colors::yellow << "\t<32> characters" << core::colors::white << endl;
         cout << core::colors::yellow << "Enter your Keyboard-letters : " << core::colors::white; cin >> mood; cout << endl;
-        cout << custom_password_maker(characters, mood);
+        cout << core::custom_password_maker(characters, mood);
         sys_ok();
         break;
       }
@@ -85,7 +85,7 @@ int main(int argc, char* argv[]) {
         cout << core::colors::yellow << "How many characters do you want your password to be?" << core::colors::white; cin >> characters;
         cout << core::colors::yellow << "<" << characters << "> characters" << core::colors::white << endl;
         cout << core::colors::yellow << "Enter your Keyboard-letters : " << core::colors::white; cin >> mood; cout << endl;
-        take_mood = custom_password_maker(characters, mood);
+        take_mood = core::custom_password_maker(characters, mood);
         cout << take_mood;
         sys_ok();
         break;
@@ -136,7 +136,7 @@ int main(int argc, char* argv[]) {
       if (argc == 2) {
         cout << core::colors::yellow << "The default is <16> characters" << core::colors::white << endl;
         characters = 16;
-        cout << custom_password_maker(characters, mood);
+        cout << core::custom_password_maker(characters, mood);
         sys_ok();
         break;
       }
@@ -145,7 +145,7 @@ int main(int argc, char* argv[]) {
       else if (((strcmp(argv[2], "8")) == 0)) {
         cout << core::colors::yellow << "\t<8> characters" << core::colors::white << endl;
         characters = 8;
-        cout << custom_password_maker(characters, mood);
+        cout << core::custom_password_maker(characters, mood);
         sys_ok();
         break;
       }
@@ -153,7 +153,7 @@ int main(int argc, char* argv[]) {
       else if (((strcmp(argv[2], "16")) == 0)) {
         cout << core::colors::yellow << "\t<16> characters" << core::colors::white << endl;
         characters = 16;
-        cout << custom_password_maker(characters, mood);
+        cout << core::custom_password_maker(characters, mood);
         sys_ok();
         break;
       }
@@ -161,7 +161,7 @@ int main(int argc, char* argv[]) {
       else if (((strcmp(argv[2], "32")) == 0)) {
         cout << core::colors::yellow << "\t<32> characters" << core::colors::white << endl;
         characters = 32;
-        cout << custom_password_maker(characters, mood);
+        cout << core::custom_password_maker(characters, mood);
         sys_ok();
         break;
       }
@@ -170,7 +170,7 @@ int main(int argc, char* argv[]) {
                ((strcmp(argv[2], "length")) == 0) ||
                ((strcmp(argv[2], "-len")) == 0)) {
         cout << core::colors::yellow << "How many characters do you want your password to be?" << core::colors::white; cin >> characters;
-        take_mood = custom_password_maker(characters, mood);
+        take_mood = core::custom_password_maker(characters, mood);
         cout << take_mood;
         sys_ok();
         break;
@@ -187,7 +187,7 @@ int main(int argc, char* argv[]) {
       if (argc == 2) {
         cout << core::colors::yellow << "The default is <16> characters" << core::colors::white << endl;
         characters = 16;
-        cout << custom_password_maker(characters, mood);
+        cout << core::custom_password_maker(characters, mood);
         sys_ok();
         break;
       }
@@ -196,7 +196,7 @@ int main(int argc, char* argv[]) {
       else if (((strcmp(argv[2], "8")) == 0)) {
         cout << core::colors::yellow << "\t<8> characters" << core::colors::white << endl;
         characters = 8;
-        cout << custom_password_maker(characters, mood);
+        cout << core::custom_password_maker(characters, mood);
         sys_ok();
         break;
       }
@@ -204,7 +204,7 @@ int main(int argc, char* argv[]) {
       else if (((strcmp(argv[2], "16")) == 0)) {
         cout << core::colors::yellow << "\t<16> characters" << core::colors::white << endl;
         characters = 16;
-        cout << custom_password_maker(characters, mood);
+        cout << core::custom_password_maker(characters, mood);
         sys_ok();
         break;
       }
@@ -212,7 +212,7 @@ int main(int argc, char* argv[]) {
       else if (((strcmp(argv[2], "32")) == 0)) {
         cout << core::colors::yellow << "\t<32> characters" << core::colors::white << endl;
         characters = 32;
-        cout << custom_password_maker(characters, mood);
+        cout << core::custom_password_maker(characters, mood);
         sys_ok();
         break;
       }
@@ -221,7 +221,7 @@ int main(int argc, char* argv[]) {
                ((strcmp(argv[2], "length")) == 0) ||
                ((strcmp(argv[2], "-len")) == 0)) {
         cout << core::colors::yellow << "How many characters do you want your password to be?" << core::colors::white; cin >> characters;
-        take_mood = custom_password_maker(characters, mood);
+        take_mood = core::custom_password_maker(characters, mood);
         cout << take_mood;
         sys_ok();
         break;
@@ -239,7 +239,7 @@ int main(int argc, char* argv[]) {
       if (argc == 2) {
         cout << core::colors::yellow << "The default is <16> characters" << core::colors::white << endl;
         characters = 16;
-        cout << custom_password_maker(characters, mood);
+        cout << core::custom_password_maker(characters, mood);
         sys_ok();
         break;
       }
@@ -248,7 +248,7 @@ int main(int argc, char* argv[]) {
       else if (((strcmp(argv[2], "8")) == 0)) {
         cout << core::colors::yellow << "\t<8> characters" << core::colors::white << endl;
         characters = 8;
-        cout << custom_password_maker(characters, mood);
+        cout << core::custom_password_maker(characters, mood);
         sys_ok();
         break;
       }
@@ -256,7 +256,7 @@ int main(int argc, char* argv[]) {
       else if (((strcmp(argv[2], "16")) == 0)) {
         cout << core::colors::yellow << "\t<16> characters" << core::colors::white << endl;
         characters = 16;
-        cout << custom_password_maker(characters, mood);
+        cout << core::custom_password_maker(characters, mood);
         sys_ok();
         break;
       }
@@ -264,7 +264,7 @@ int main(int argc, char* argv[]) {
       else if (((strcmp(argv[2], "32")) == 0)) {
         cout << core::colors::yellow << "\t<32> characters" << core::colors::white << endl;
         characters = 32;
-        cout << custom_password_maker(characters, mood);
+        cout << core::custom_password_maker(characters, mood);
         sys_ok();
         break;
       }
@@ -273,7 +273,7 @@ int main(int argc, char* argv[]) {
                ((strcmp(argv[2], "length")) == 0) ||
                ((strcmp(argv[2], "-len")) == 0)) {
         cout << core::colors::yellow << "How many characters do you want your password to be?" << core::colors::white; cin >> characters;
-        take_mood = custom_password_maker(characters, mood);
+        take_mood = core::custom_password_maker(characters, mood);
         cout << take_mood;
         sys_ok();
         break;
@@ -291,7 +291,7 @@ int main(int argc, char* argv[]) {
       if (argc == 2) {
         cout << core::colors::yellow << "The default is <16> characters" << core::colors::white << endl;
         characters = 16;
-        cout << custom_password_maker(characters, mood);
+        cout << core::custom_password_maker(characters, mood);
         sys_ok();
         break;
       }
@@ -300,7 +300,7 @@ int main(int argc, char* argv[]) {
       else if (((strcmp(argv[2], "8")) == 0)) {
         cout << core::colors::yellow << "\t<8> characters" << core::colors::white << endl;
         characters = 8;
-        cout << custom_password_maker(characters, mood);
+        cout << core::custom_password_maker(characters, mood);
         sys_ok();
         break;
       }
@@ -308,7 +308,7 @@ int main(int argc, char* argv[]) {
       else if (((strcmp(argv[2], "16")) == 0)) {
         cout << core::colors::yellow << "\t<16> characters" << core::colors::white << endl;
         characters = 16;
-        cout << custom_password_maker(characters, mood);
+        cout << core::custom_password_maker(characters, mood);
         sys_ok();
         break;
       }
@@ -316,7 +316,7 @@ int main(int argc, char* argv[]) {
       else if (((strcmp(argv[2], "32")) == 0)) {
         cout << core::colors::yellow << "\t<32> characters" << core::colors::white << endl;
         characters = 32;
-        cout << custom_password_maker(characters, mood);
+        cout << core::custom_password_maker(characters, mood);
         sys_ok();
         break;
       }
@@ -325,7 +325,7 @@ int main(int argc, char* argv[]) {
                ((strcmp(argv[2], "length")) == 0) ||
                ((strcmp(argv[2], "-len")) == 0)) {
         cout << core::colors::yellow << "How many characters do you want your password to be?" << core::colors::white; cin >> characters;
-        take_mood = custom_password_maker(characters, mood);
+        take_mood = core::custom_password_maker(characters, mood);
         cout << take_mood;
         sys_ok();
         break;
@@ -342,7 +342,7 @@ int main(int argc, char* argv[]) {
       if (argc == 2) {
         cout << core::colors::yellow << "The default is <16> characters" << core::colors::white << endl;
         characters = 16;
-        cout << custom_password_maker(characters, mood);
+        cout << core::custom_password_maker(characters, mood);
         sys_ok();
         break;
       }
@@ -351,7 +351,7 @@ int main(int argc, char* argv[]) {
       else if (((strcmp(argv[2], "8")) == 0)) {
         cout << core::colors::yellow << "\t<8> characters" << core::colors::white << endl;
         characters = 8;
-        cout << custom_password_maker(characters, mood);
+        cout << core::custom_password_maker(characters, mood);
         sys_ok();
         break;
       }
@@ -359,7 +359,7 @@ int main(int argc, char* argv[]) {
       else if (((strcmp(argv[2], "16")) == 0)) {
         cout << core::colors::yellow << "\t<16> characters" << core::colors::white << endl;
         characters = 16;
-        cout << custom_password_maker(characters, mood);
+        cout << core::custom_password_maker(characters, mood);
         sys_ok();
         break;
       }
@@ -367,7 +367,7 @@ int main(int argc, char* argv[]) {
       else if (((strcmp(argv[2], "32")) == 0)) {
         cout << core::colors::yellow << "\t<32> characters" << core::colors::white << endl;
         characters = 32;
-        cout << custom_password_maker(characters, mood);
+        cout << core::custom_password_maker(characters, mood);
         sys_ok();
         break;
       }
@@ -376,7 +376,7 @@ int main(int argc, char* argv[]) {
                ((strcmp(argv[2], "length")) == 0) ||
                ((strcmp(argv[2], "-len")) == 0)) {
         cout << core::colors::yellow << "How many characters do you want your password to be?" << core::colors::white; cin >> characters;
-        take_mood = custom_password_maker(characters, mood);
+        take_mood = core::custom_password_maker(characters, mood);
         cout << take_mood;
         sys_ok();
         break;
@@ -393,7 +393,7 @@ int main(int argc, char* argv[]) {
       if (argc == 2) {
         cout << core::colors::yellow << "The default is <16> characters" << core::colors::white << endl;
         characters = 16;
-        cout << custom_password_maker(characters, mood);
+        cout << core::custom_password_maker(characters, mood);
         sys_ok();
         break;
       }
@@ -402,7 +402,7 @@ int main(int argc, char* argv[]) {
       else if (((strcmp(argv[2], "8")) == 0)) {
         cout << core::colors::yellow << "\t<8> characters" << core::colors::white << endl;
         characters = 8;
-        cout << custom_password_maker(characters, mood);
+        cout << core::custom_password_maker(characters, mood);
         sys_ok();
         break;
       }
@@ -410,7 +410,7 @@ int main(int argc, char* argv[]) {
       else if (((strcmp(argv[2], "16")) == 0)) {
         cout << core::colors::yellow << "\t<16> characters" << core::colors::white << endl;
         characters = 16;
-        cout << custom_password_maker(characters, mood);
+        cout << core::custom_password_maker(characters, mood);
         sys_ok();
         break;
       }
@@ -418,7 +418,7 @@ int main(int argc, char* argv[]) {
       else if (((strcmp(argv[2], "32")) == 0)) {
         cout << core::colors::yellow << "\t<32> characters" << core::colors::white << endl;
         characters = 32;
-        cout << custom_password_maker(characters, mood);
+        cout << core::custom_password_maker(characters, mood);
         sys_ok();
         break;
       }
@@ -427,7 +427,7 @@ int main(int argc, char* argv[]) {
                ((strcmp(argv[2], "length")) == 0) ||
                ((strcmp(argv[2], "-len")) == 0)) {
         cout << core::colors::yellow << "How many characters do you want your password to be?" << core::colors::white; cin >> characters;
-        take_mood = custom_password_maker(characters, mood);
+        take_mood = core::custom_password_maker(characters, mood);
         cout << take_mood;
         sys_ok();
         break;
@@ -444,7 +444,7 @@ int main(int argc, char* argv[]) {
       if (argc == 2) {
         cout << core::colors::yellow << "The default is <16> characters" << core::colors::white << endl;
         characters = 16;
-        cout << custom_password_maker(characters, mood);
+        cout << core::custom_password_maker(characters, mood);
         sys_ok();
         break;
       }
@@ -453,7 +453,7 @@ int main(int argc, char* argv[]) {
       else if (((strcmp(argv[2], "8")) == 0)) {
         cout << core::colors::yellow << "\t<8> characters" << core::colors::white << endl;
         characters = 8;
-        cout << custom_password_maker(characters, mood);
+        cout << core::custom_password_maker(characters, mood);
         sys_ok();
         break;
       }
@@ -461,7 +461,7 @@ int main(int argc, char* argv[]) {
       else if (((strcmp(argv[2], "16")) == 0)) {
         cout << core::colors::yellow << "\t<16> characters" << core::colors::white << endl;
         characters = 16;
-        cout << custom_password_maker(characters, mood);
+        cout << core::custom_password_maker(characters, mood);
         sys_ok();
         break;
       }
@@ -469,7 +469,7 @@ int main(int argc, char* argv[]) {
       else if (((strcmp(argv[2], "32")) == 0)) {
         cout << core::colors::yellow << "\t<32> characters" << core::colors::white << endl;
         characters = 32;
-        take_mood = custom_password_maker(characters, mood);
+        take_mood = core::custom_password_maker(characters, mood);
         cout << take_mood;
         sys_ok();
         break;
@@ -479,7 +479,7 @@ int main(int argc, char* argv[]) {
                ((strcmp(argv[2], "length")) == 0) ||
                ((strcmp(argv[2], "-len")) == 0)) {
         cout << core::colors::yellow << "How many characters do you want your password to be?" << core::colors::white; cin >> characters;
-        cout << custom_password_maker(characters, mood);
+        cout << core::custom_password_maker(characters, mood);
         sys_ok();
         break;
       } else {

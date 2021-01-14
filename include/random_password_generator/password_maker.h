@@ -5,6 +5,8 @@
 #include <string>
 #include <ctime>
 
+namespace core {
 std::string custom_password_maker(const int unit, const std::string& mood);
+}
 
-#endif 
+#endif

@@ -24,7 +24,7 @@ int main(int argc, char* argv[]) {
              ((strcmp(argv[1], "--version")) == 0) ||
              ((strcmp(argv[1], "version")) == 0)) {
 
-      version();
+      core::version();
       sys_ok();
       break;
     }

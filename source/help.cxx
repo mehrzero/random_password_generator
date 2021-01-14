@@ -3,7 +3,7 @@
 
 #include <iostream>
 
-void help() {
+void core::help() {
   using namespace std;
 
   cout << core::colors::white << endl;

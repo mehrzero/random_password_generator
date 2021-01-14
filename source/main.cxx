@@ -33,7 +33,7 @@ int main(int argc, char* argv[]) {
              ((strcmp(argv[1], "--help")) == 0) ||
              ((strcmp(argv[1], "help")) == 0)) {
 
-      help();
+      core::help();
       sys_ok();
       break;
     }

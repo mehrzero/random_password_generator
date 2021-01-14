@@ -1,5 +1,5 @@
 TEMPLATE = app
-TARGET   = random_password_generator
+TARGET   = rp9
 CONFIG  += c++17
 
 SOURCES += \
